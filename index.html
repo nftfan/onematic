@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NFTFANS SHOP</title>
+<style>
+  body {
+    background-color: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+  }
+  .title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 20px;
+  }
+  .description {
+    text-align: center;
+    font-size: 10px;
+    color: grey;
+    margin-top: 5px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .card {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+  }
+  .image {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 5px;
+  }
+  .title {
+    margin-top: 10px;
+    font-size: 12px;
+    color: grey;
+  }
+  .buy-button {
+    position: absolute;
+    bottom: -35px;
+    left: 10px;
+    background-color: #2081e2;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .buy-button:hover {
+    background-color: #FF8000;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #333;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    color: #eee;
+    text-align: center;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .close:hover,
+  .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="title">NFTFANS SHOP</div>
+<div class="description">With the purchase of any NFT you will also receive 2,000,000,000,000,000 $nftfan Polygon Matic Tokens.</div>
+<div class="container">
+  <div class="card">
+    <img class="image" src="https://i.seadn.io/s/raw/files/c9b8c93286e57953f4885a4b05df9194.png?auto=format&dpr=1&w=1000" alt="Price 1.0012 $matic">
+    <div class="title">Price 1.0012 $matic</div>
+    <button class="buy-button" onclick="showPaymentModal()">Buy NFT</button>
+  </div>
+  
+  <div class="card">
+    <img class="image" src="https://i.seadn.io/s/raw/files/0ebbb12515a30af8632e6557fea55565.png?auto=format&dpr=1&w=1000" alt="Price 1.0014 $matic">
+    <div class="title">Price 0.0101 $matic</div>
+    <button class="buy-button" onclick="showPaymentModal()">Buy NFT</button>
+  </div>
+  <!-- Add more cards as needed -->
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>Pay NFT price to our official wallet:</p>
+    <p>0x92d550cdBc234211957Bd1B579d962c885A127Ba</p>
+	<p>You will receive your NFT and Tokens in 24h</p>
+	
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("buy-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function showPaymentModal() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
